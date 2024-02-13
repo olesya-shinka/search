@@ -1,0 +1,15 @@
+.content-filter-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content-filter-item {
+    display: flex;
+    padding: 5px;
+}
+
+.content-filter-item-checkbox:checked::before {
+    border-color: #07274d;
+    background-color: #083971;
+}
