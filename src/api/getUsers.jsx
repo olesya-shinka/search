@@ -2,7 +2,7 @@ export async function getUsers(names) {
   let users = [];
 
   for (let name of names) {
-    let user = fetch(`https://api.github.com/search/users?${name}`).then(
+    let user = fetch(`https://api.github.com/search/users?q=${name}`).then(
       (successResponse) => {
         if (successResponse.status !== 200) {
           return null;

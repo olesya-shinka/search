@@ -6,17 +6,25 @@ import { useState } from "react";
 export function Search() {
   const [data, setData] = useState({});
   const [name, setName] = useState("");
+  const [repos, setRepos] = useState([]);
+
   const handlerSeekerUser = (e) => {
     setName(e.target.value);
   };
+
   const handlerSearch = async (e) => {
     e.preventDefault();
     const profileUser = await fetch(
       `https://api.github.com/search/users?q=${name}`
     );
     const profileUserJson = await profileUser.json();
-    console.log(profileUserJson);
+    //console.log(profileUserJson);
+
+    const repos = await fetch(`https://api.github.com/users/${name}/repos`);
+    const reposJson = await repos.json();
+    //console.log(reposJson);
   };
+
   return (
     <div className="input-content">
       <div>
