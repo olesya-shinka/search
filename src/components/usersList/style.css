@@ -1,18 +1,8 @@
 .content-list {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 100px;
     margin-top: 50px;
 }
 
-.content-users {
-    display: flex;
-    flex-direction: column;
-    min-width: 350px;
-}
-
-ul {
+li {
     list-style-type: none;
 }
 
@@ -20,10 +10,41 @@ ul {
     border-radius: 30px;
     background-color: #d7def2;
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .content-users-item {
-    min-height: 150px;
+    min-height: 50px;
     background-color: #fcfdff;
     border-radius: 30px;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.user-content {
+    min-width: 700px;
+    min-height: 500px;
+    border: 2px solid #d7def2;
+}
+
+.user-item-title {
+    font-size: 18px;
+    border: 2px solid #d7def2;
+}
+
+.user-item {
+    border: 2px solid #d7def2;
+}
+
+.user-item-repos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: start;
+    margin-left: 15px;
 }

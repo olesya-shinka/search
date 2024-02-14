@@ -38,3 +38,9 @@
 .input-btn:hover {
     transform: scale(1.05);
 }
+
+.content-users {
+    display: flex;
+    gap: 100px;
+    margin-top: 50px;
+}

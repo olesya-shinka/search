@@ -18,11 +18,14 @@ export function Search() {
       `https://api.github.com/search/users?q=${name}`
     );
     const profileUserJson = await profileUser.json();
-    //console.log(profileUserJson);
+    console.log(profileUserJson);
 
     const repos = await fetch(`https://api.github.com/users/${name}/repos`);
     const reposJson = await repos.json();
-    //console.log(reposJson);
+    console.log(reposJson);
+
+    setData(profileUserJson);
+    setRepos(reposJson);
   };
 
   return (
@@ -41,8 +44,8 @@ export function Search() {
       <button type="submit" onClick={handlerSearch} className="input-btn">
         Искать
       </button>
-      <div>
-        <UsersList />
+      <div className="content-users">
+        <UsersList data={data} repos={repos} />
       </div>
     </div>
   );
