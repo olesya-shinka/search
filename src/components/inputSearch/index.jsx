@@ -4,6 +4,9 @@ import "./style.css";
 export function InputSearch() {
   return (
     <div className="input-content">
+      <div>
+        <img className="icon-git" src="25231.png" alt="icongit" />
+      </div>
       <IoIosSearch className="input-icon" />
       <input
         className="input"
