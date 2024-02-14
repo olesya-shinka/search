@@ -7,7 +7,9 @@ export function UsersList() {
       <FilterRepositories />
       <div className="content-users">
         <ul className="content-users-list">
-          <li className="content-users-item">пользователи</li>
+          <li className="content-users-item">
+            <p></p>
+          </li>
         </ul>
       </div>
     </div>

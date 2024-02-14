@@ -1,6 +1,7 @@
 import "./style.css";
 
 function FilterRepositories() {
+  
   return (
     <div className="content-filter-list">
       <h4 className="content-filter-title">Найдено 10 пользователей</h4>
@@ -9,7 +10,6 @@ function FilterRepositories() {
         <input
           type="checkbox"
           name="убыванию"
-          value={false}
           className="content-filter-item-checkbox"
         />
         убыванию
@@ -18,7 +18,6 @@ function FilterRepositories() {
         <input
           type="checkbox"
           name="возрастанию"
-          value={false}
           className="content-filter-item-checkbox"
         />
         возрастанию

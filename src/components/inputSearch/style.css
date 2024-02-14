@@ -19,8 +19,15 @@
 
 .input-btn {
     margin-left: 15px;
-    width: 60px;
+    width: 65px;
     height: 30px;
     border-radius: 5px;
     cursor: pointer;
+    background-color: #d7def2;
+    transition: all 500ms ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.input-btn:hover {
+    transform: scale(1.05);
 }

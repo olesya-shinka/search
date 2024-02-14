@@ -2,6 +2,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    border-radius: 30px;
+    background-color: #d7def2;
+    min-height: 150px;
+    padding: 15px;
+
 }
 
 .content-filter-item {

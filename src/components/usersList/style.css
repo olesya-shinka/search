@@ -6,6 +6,25 @@
     margin-top: 50px;
 }
 
-ol {
+.content-users {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+
+}
+
+ul {
     list-style-type: none;
+}
+
+.content-users-list {
+    border-radius: 30px;
+    background-color: #d7def2;
+    padding: 15px;
+}
+
+.content-users-item {
+    min-height: 150px;
+    background-color: #fcfdff;
+    border-radius: 30px;
 }
