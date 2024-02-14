@@ -9,8 +9,7 @@
 .content-users {
     display: flex;
     flex-direction: column;
-    width: 350px;
-
+    min-width: 350px;
 }
 
 ul {

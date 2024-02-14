@@ -8,7 +8,8 @@ export function UsersList() {
       <div className="content-users">
         <ul className="content-users-list">
           <li className="content-users-item">
-            <p></p>
+            <p>name</p>
+            <p>repozitories</p>
           </li>
         </ul>
       </div>

@@ -1,12 +1,10 @@
 /* eslint-disable no-unreachable */
-import InputSearch from "../components/inputSearch";
-import UsersList from "../components/usersList";
+import Search from "../components/inputSearch";
 
 function MainPage() {
   return (
     <>
-      <InputSearch />
-      <UsersList />
+      <Search />
     </>
   );
 }
