@@ -2,30 +2,36 @@ import { IoIosSearch } from "react-icons/io";
 import "./style.css";
 import UsersList from "../usersList";
 import { useState } from "react";
+import { getUserInfo } from "../../api/getUsers";
 
 export function Search() {
-  const [data, setData] = useState({});
-  const [name, setName] = useState("");
+  const [data, setData] = useState([]);
+  const [username, setUserName] = useState("");
   const [repos, setRepos] = useState([]);
+  const [userInfo, setUserInfo] = useState([]);
 
   const handlerSeekerUser = (e) => {
-    setName(e.target.value);
+    setUserName(e.target.value);
   };
 
   const handlerSearch = async (e) => {
     e.preventDefault();
     const profileUser = await fetch(
-      `https://api.github.com/search/users?q=${name}`
+      `https://api.github.com/search/users?q=${username}`
     );
     const profileUserJson = await profileUser.json();
     console.log(profileUserJson);
 
-    const repos = await fetch(`https://api.github.com/users/${name}/repos`);
+    const repos = await fetch(`https://api.github.com/users/${username}/repos`);
     const reposJson = await repos.json();
-    console.log(reposJson);
+
+    const userInfo = await fetch(`https://api.github.com/users/${username}`);
+    const userInfoJson = userInfo.json();
+    console.log(userInfoJson);
 
     setData(profileUserJson);
     setRepos(reposJson);
+    setUserInfo(userInfoJson);
   };
 
   return (
@@ -38,14 +44,14 @@ export function Search() {
         className="input"
         type="text"
         placeholder="Введите логин пользователя"
-        value={name}
+        value={username}
         onChange={handlerSeekerUser}
       />
       <button type="submit" onClick={handlerSearch} className="input-btn">
         Искать
       </button>
       <div className="content-users">
-        <UsersList data={data} repos={repos} />
+        <UsersList data={data} repos={repos} userInfo={userInfo} />
       </div>
     </div>
   );

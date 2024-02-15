@@ -39,6 +39,7 @@ img {
 
 .user-item {
     border: 2px solid #d7def2;
+    width: 200px;
 }
 
 .user-item-repos {
@@ -47,4 +48,5 @@ img {
     gap: 15px;
     text-align: start;
     margin-left: 15px;
+    width: 250px;
 }
