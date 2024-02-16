@@ -1,11 +1,11 @@
-import "./App.css";
-import AppRoutes from "./routes";
+import * as S from "./App.styled";
+import { AppRoutes } from "./routes";
 
 function App() {
   return (
-    <div className="App">
+    <S.MainApp>
       <AppRoutes />
-    </div>
+    </S.MainApp>
   );
 }
 
