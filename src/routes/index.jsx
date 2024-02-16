@@ -1,11 +1,14 @@
-import { Route, Routes } from "react-router-dom";
-import MainPage from "../pages/MainPage";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { MainPage } from "../pages/MainPage/index";
+import { NotFound } from "../pages/NotFound/index";
 
-function AppRoutes() {
+export const AppRoutes = () => {
   return (
-    <Routes>
-      <Route path="/" element={<MainPage />} />
-    </Routes>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<MainPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
-}
-export default AppRoutes;
+};
