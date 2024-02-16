@@ -47,3 +47,5 @@ npm run test
 ```
 
 # Деплой проекта
+
+https://main--github-search-users-olesya-shinka.netlify.app/
